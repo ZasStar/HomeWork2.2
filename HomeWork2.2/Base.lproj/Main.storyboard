@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0lT-KD-9w3">
                                 <rect key="frame" x="128" y="67" width="119" height="368"/>
                                 <subviews>
-                                    <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-47-Ew3" userLabel="redLight">
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-47-Ew3" userLabel="redLight">
                                         <rect key="frame" x="0.0" y="0.0" width="119" height="118"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
@@ -38,24 +38,19 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qu6-BF-Ra0">
-                                <rect key="frame" x="101" y="662.66666666666663" width="173" height="65.333333333333371"/>
+                                <rect key="frame" x="101" y="664" width="173" height="64"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="Itl-kv-Ef8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="173" id="Itl-kv-Ef8"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                     <color key="titleShadowColor" systemColor="systemCyanColor"/>
                                 </state>
-                                <buttonConfiguration key="configuration" style="tinted" title="START" cornerStyle="large">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="43"/>
-                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="startButtomDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMX-RN-1s8"/>
+                                    <action selector="startButtomDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0J8-iv-xel"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +64,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="trafficLights" destination="0lT-KD-9w3" id="yVd-3R-UTf"/>
+                        <outlet property="greenLight" destination="HyG-77-lNq" id="Xwy-UJ-YYM"/>
+                        <outlet property="redLight" destination="Gwo-47-Ew3" id="e6b-Es-qJX"/>
+                        <outlet property="startButtom" destination="qu6-BF-Ra0" id="38c-qT-kg6"/>
+                        <outlet property="yellowLight" destination="b9O-97-epO" id="bQj-p2-fwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
